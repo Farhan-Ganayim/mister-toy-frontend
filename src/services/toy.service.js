@@ -72,7 +72,12 @@ function getToyLabels() {
 
 
 function getDefaultFilter() {
-    return { txt: '', importance: 0 }
+    return {
+        txt: '',
+        inStock: null,
+        labels: [],
+        pageIdx: 0,
+    }
 }
 
 function getFilterFromSearchParams(searchParams) {

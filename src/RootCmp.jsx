@@ -6,13 +6,17 @@ import { HomePage } from './pages/Home.jsx'
 import { ToyIndex } from './pages/ToyIndex.jsx'
 import { About } from './pages/About.jsx'
 
-import './assets/style/main.css'
+import { Provider } from 'react-redux'
+import { store } from './store/store.js'
 
+import './assets/style/main.css'
 
 
 
 export function RootCmp() {
     return (
+        <Provider store={store}>
+
         <Router>
             <section className="app main-layout">
                 <AppHeader />
@@ -27,5 +31,7 @@ export function RootCmp() {
             </section>
 
         </Router>
+        </Provider>
+
     )
 }
