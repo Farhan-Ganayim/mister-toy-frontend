@@ -34,7 +34,9 @@ function query(filterBy = {}) {
                 const regExp = new RegExp(filterBy.name, 'i')
                 toys = toys.filter(toy => regExp.test(toy.name))
             }
-
+            if (filterBy.inStock !== undefined) {
+                toys = toys.filter(toy => toy.inStock === filterBy.inStock)
+            }
             return toys
         })
 }
@@ -75,7 +77,7 @@ function getToyLabels() {
 function getDefaultFilter() {
     return {
         txt: '',
-        inStock: null,
+        inStock: undefined,
         labels: [],
         pageIdx: 0,
     }

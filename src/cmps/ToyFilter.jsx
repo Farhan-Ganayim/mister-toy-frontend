@@ -35,14 +35,20 @@ export function ToyFilter({ filterBy, onSetFilter, toyLabels }) {
                     onChange={handleChange}
                 />
 
-                <select name="inStock" value={inStock ?? ''} onChange={handleChange}>
+                <select name="inStock"
+                    value={inStock === undefined ? '' : inStock}
+                    onChange={handleChange}>
                     <option value="">All</option>
                     <option value="true">In stock</option>
                     <option value="false">Out of stock</option>
                 </select>
 
                 {toyLabels && (
-                    <select multiple name="labels" value={labels} onChange={handleChange}>
+                    <select
+                        multiple
+                        name="labels"
+                        value={labels}
+                        onChange={handleChange}>
                         {toyLabels.map(lb => (
                             <option key={lb} value={lb}>{lb}</option>
                         ))}
