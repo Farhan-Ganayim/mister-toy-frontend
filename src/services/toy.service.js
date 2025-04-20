@@ -30,9 +30,9 @@ export const toyService = {
 function query(filterBy = {}) {
     return storageService.query(TOY_KEY)
         .then(toys => {
-            if (filterBy.txt) {
-                const regExp = new RegExp(filterBy.txt, 'i')
-                toys = toys.filter(toy => regExp.test(toy.txt))
+            if (filterBy.name) {
+                const regExp = new RegExp(filterBy.name, 'i')
+                toys = toys.filter(toy => regExp.test(toy.name))
             }
 
             return toys
@@ -50,7 +50,7 @@ function remove(toyId) {
 function save(toy) {
     if (toy._id) {
         toy.updatedAt = Date.now()
-        return storageService.put(TODO_KEY, toy)
+        return storageService.put(TOY_KEY, toy)
     } else {
         toy.createdAt = toy.createdAt = Date.now()
 
@@ -67,7 +67,8 @@ function getEmptyToy() {
     }
 }
 function getToyLabels() {
-    return Promise.resolve(labels)
+    // return Promise.resolve(labels)
+    return labels
 }
 
 

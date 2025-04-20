@@ -1,16 +1,21 @@
-.todo-preview {
+.toy-preview {
     text-align: center;
     padding: 0.3em;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 200%;
+    place-self: center;
+    .out-stock{
+        color: brown;
+    }
 }
 
-.todo-preview h4 {
+.toy-preview h4 {
     text-transform: capitalize;
     color: black;
 }
 
-.todo-preview img {
+.toy-preview img {
     max-width: 100px;
 }
