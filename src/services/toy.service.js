@@ -37,6 +37,11 @@ function query(filterBy = {}) {
             if (filterBy.inStock !== undefined) {
                 toys = toys.filter(toy => toy.inStock === filterBy.inStock)
             }
+            if (filterBy.labels?.length) {
+                toys = toys.filter(toy =>
+                    filterBy.labels.every(label => toy.labels.includes(label))
+                )
+            }
             return toys
         })
 }

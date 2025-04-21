@@ -12,7 +12,7 @@ export function ToyPreview({ toy, onRemove, onToggleStock }) {
                     src={`https://api.dicebear.com/8.x/bottts/png?seed=${(toy.name)}`}
                     alt={toy.name}
                 />
-                <p className="price">${toy.price}</p>
+                <p className="price">Price :${toy.price}</p>
                 <p className={toy.inStock ? 'in-stock' : 'out-stock'}>
                     {toy.inStock ? 'In stock' : 'Out of stock'}
                 </p>
