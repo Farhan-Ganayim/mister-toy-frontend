@@ -22,6 +22,7 @@ export const toyService = {
     save,
     getEmptyToy,
     getToyLabels,
+    getToyLabelData,
     getDefaultFilter,
     getFilterFromSearchParams,
 
@@ -76,6 +77,21 @@ function getEmptyToy() {
 function getToyLabels() {
     // return Promise.resolve(labels)
     return labels
+}
+
+function getToyLabelData() {
+    return storageService.query(TOY_KEY).then(toys => {
+        const labelData = {}
+        toys.forEach(toy => {
+            toy.labels.forEach(label => {
+                if (!labelData[label]) labelData[label] = { total: 0, inStock: 0, sumPrice: 0 }
+                labelData[label].total++
+                labelData[label].sumPrice += toy.price
+                if (toy.inStock) labelData[label].inStock++
+            })
+        })
+        return labelData
+    })
 }
 
 
