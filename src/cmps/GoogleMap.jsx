@@ -1,30 +1,60 @@
-import React from "react"
+import React, { useState } from "react"
 import GoogleMapReact from 'google-map-react'
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>
+
+const branches = [
+    { town: 'Haifa', lat: 32.8, lng: 35 },
+    { town: 'Kiryat Ata', lat: 32.8027, lng: 35.104 },
+    { town: 'Atlit', lat: 32.6920, lng: 34.9392 }
+]
+
+const BranchMarker = ({ text }) => <div style={{ fontSize: '3em' }}> {text}</div >
 
 export function GoogleMap() {
-    const defaultProps = {
-        center: {
-            lat: 10.99835602,
-            lng: 77.01502627
-        },
-        zoom: 11
+
+    const [center, setCenter] = useState({ lat: 32.8, lng: 35 })
+    const [zoom, setZoom] = useState(11)
+
+    function centerBranch(branch) {
+        setCenter({ lat: branch.lat, lng: branch.lng })
+        setZoom(13)
     }
 
     return (
-        <div style={{ height: '70vh', width: '80%' }}>
-            <GoogleMapReact
-                bootstrapURLKeys={{ key: "AIzaSyCxu5ZZQN_aFcTLSTEdU_pohO9asLPwLIk" }}
-                defaultCenter={defaultProps.center}
-                defaultZoom={defaultProps.zoom}
-            >
-                <AnyReactComponent
-                    lat={59.955413}
-                    lng={30.337844}
-                    text="My Marker"
-                />
-            </GoogleMapReact>
-        </div>
+        <section className="map-container">
+            <h2>Branches</h2>
+            <div className="Branches-buttons">
+                {branches.map(branch => (
+                    <button key={branch.town}
+                        onClick={() => centerBranch(branch)}>
+                        {branch.town}
+                    </button>
+                ))}
+            </div>
+
+            <div style={{ height: '60vh', width: '70%' }}>
+                <GoogleMapReact
+                    bootstrapURLKeys={{ key: "AIzaSyCxu5ZZQN_aFcTLSTEdU_pohO9asLPwLIk" }}
+                    center={center}
+                    zoom={zoom}
+                >
+                    <BranchMarker
+                        lat={32.8}
+                        lng={35}
+                        text="🏠"
+                    />
+                    <BranchMarker
+                        lat={32.8027}
+                        lng={35.104}
+                        text="🏠"
+                    />
+                    <BranchMarker
+                        lat={32.6920}
+                        lng={34.9392}
+                        text="🏠"
+                    />
+                </GoogleMapReact>
+            </div>
+        </section>
     )
 }
