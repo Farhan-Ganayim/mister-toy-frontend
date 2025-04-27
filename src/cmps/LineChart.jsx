@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -8,8 +8,8 @@ import {
     Title,
     Tooltip,
     Legend,
-} from 'chart.js';
-import { Line } from 'react-chartjs-2';
+} from 'chart.js'
+import { Line } from 'react-chartjs-2'
 
 ChartJS.register(
     CategoryScale,
@@ -19,7 +19,7 @@ ChartJS.register(
     Title,
     Tooltip,
     Legend
-);
+)
 
 export const options = {
     responsive: true,
@@ -55,8 +55,8 @@ export const data = {
             backgroundColor: 'rgba(53, 162, 235, 0.5)',
         },
     ],
-};
+}
 
 export function LineChart() {
-    return <Line options={options} data={data} />;
+    return <Line options={options} data={data} />
 }

@@ -1,3 +1,4 @@
+import { GoogleMap } from "../cmps/GoogleMap"
 
 export function About() {
     return (
@@ -9,6 +10,7 @@ export function About() {
                 numquam labore quae. Accusamus libero perferendis ducimus? Alias unde
                 hic quisquam doloremque.
             </p>
+            <GoogleMap/>
         </section>
     )
 }

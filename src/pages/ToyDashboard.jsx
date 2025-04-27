@@ -1,4 +1,4 @@
-import { LineChart } from "../assets/style/cmps/LineChart"
+import { LineChart } from "../cmps/LineChart"
 import { PriceByLabelChart } from "../cmps/PriceByLabelChart"
 import { StockByLabelChart } from "../cmps/StockByLabelChart"
 
