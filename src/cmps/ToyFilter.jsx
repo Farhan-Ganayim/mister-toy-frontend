@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { MultiSelect } from './MultiSelect'
 
 export function ToyFilter({ filterBy, onSetFilter, toyLabels }) {
 
@@ -43,7 +44,7 @@ export function ToyFilter({ filterBy, onSetFilter, toyLabels }) {
                     <option value="false">Out of stock</option>
                 </select>
 
-                {toyLabels && (
+                {/* {toyLabels && (
                     <select
                         multiple
                         name="labels"
@@ -53,7 +54,19 @@ export function ToyFilter({ filterBy, onSetFilter, toyLabels }) {
                             <option key={lb} value={lb}>{lb}</option>
                         ))}
                     </select>
+                )} */}
+
+                {toyLabels && (
+                    <MultiSelect
+                        options={toyLabels}
+                        value={labels}
+                        label="Labels"
+                        onChange={newArr =>
+                            setFilterByToEdit(prev => ({ ...prev, labels: newArr }))
+                        }
+                    />
                 )}
+
             </form>
 
             {/* <ToySort sortBy={sortBy} onSetSort={onSetSort} /> */}

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import toyImg from '../assets/img/Toys.png'
+import { MultiSelect } from '../cmps/MultiSelect'
 
 export function HomePage() {
     return (
@@ -12,10 +12,6 @@ export function HomePage() {
                     </button>
                 </Link>
             </div>
-            {/* <img
-                src={toyImg}
-                alt="Toys Img"
-            /> */}
         </section>
     )
 }
