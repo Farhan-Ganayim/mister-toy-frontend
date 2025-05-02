@@ -9,7 +9,7 @@ export const UPDATE_TOY = 'UPDATE_TOY'
 const initialState = {
   toys: [],
   isLoading: false,
-  filterBy: toyService.getDefaultFilter()
+//   filterBy: toyService.getDefaultFilter()
 }
 
 export function toyReducer(state = initialState, cmd = {}) {
