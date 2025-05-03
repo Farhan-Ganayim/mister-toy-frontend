@@ -5,6 +5,7 @@ import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service.js'
 import { ToyFilter } from '../cmps/ToyFilter.jsx'
 import { toyService } from '../services/toy.service.js'
 import { ToyList } from '../cmps/ToyList.jsx'
+import { Link } from 'react-router-dom'
 
 export function ToyIndex() {
     const toys = useSelector(state => state.toyModule.toys)
@@ -41,6 +42,11 @@ export function ToyIndex() {
         <section className="toy-index">
             <ToyFilter filterBy={filterBy} onSetFilter={onSetFilter} toyLabels={toyLabels} />
             <h2>Toys</h2>
+            <div>
+                <button>
+                    <Link to="/toy/edit">Add Toy</Link>
+                </button>
+            </div>
             <ToyList
                 toys={toys}
                 onRemoveToy={onRemoveToy}

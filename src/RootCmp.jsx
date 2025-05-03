@@ -27,7 +27,7 @@ export function RootCmp() {
                             <Route element={<ToyDashboard />} path="/dashboard" />
                             <Route path="/toy" element={<ToyIndex />} />
                             <Route path="/toy/:toyId" element={<ToyDetails />} />
-                            <Route path="/toy/edit/:toyId" element={<ToyEdit />} />
+                            <Route path="/toy/edit/:toyId?" element={<ToyEdit />} />
                         </Routes >
                     </main>
                 </section>
