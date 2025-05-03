@@ -9,7 +9,6 @@ import { ToyList } from '../cmps/ToyList.jsx'
 export function ToyIndex() {
     const toys = useSelector(state => state.toyModule.toys)
     const filterBy = useSelector(state => state.toyModule.filterBy)
-    // const [filterBy, setFilterBy] = useState(toyService.getDefaultFilter())
     const [toyLabels, setToyLabels] = useState()
 
     useEffect(() => {

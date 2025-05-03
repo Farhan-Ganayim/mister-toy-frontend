@@ -21,7 +21,7 @@ export function ToyFilter({ filterBy, onSetFilter, toyLabels }) {
     }
 
 
-    const { name = '', inStock, labels = [] } = filterByToEdit
+    const { txt, inStock, labels } = filterByToEdit
 
     return (
         <section className="toy-filter container">
@@ -30,9 +30,9 @@ export function ToyFilter({ filterBy, onSetFilter, toyLabels }) {
             <form className="filter-form flex align-center">
                 <input
                     type="text"
-                    name="name"
+                    name="txt"
                     placeholder="Search by name"
-                    value={name}
+                    value={txt}
                     onChange={handleChange}
                 />
 
