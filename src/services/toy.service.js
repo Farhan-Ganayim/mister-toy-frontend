@@ -26,7 +26,7 @@ export const toyService = {
 }
 
 function query(filterBy = {}) {
-    return httpService.get(BASE_URL, {filterBy})
+    return httpService.get(BASE_URL, { filterBy })
 }
 
 function getById(toyId) {
@@ -39,7 +39,7 @@ function remove(toyId) {
 
 function save(toy) {
     if (toy._id) {
-        return httpService.put(BASE_URL, toy)
+        return httpService.put(BASE_URL + toy._id, toy)
     } else {
         return httpService.post(BASE_URL, toy)
     }
@@ -60,8 +60,7 @@ function getToyLabels() {
 }
 
 function getToyLabelData() {
-    // return storageService.query(TOY_KEY).then(toys => {
-   return query().then(toys => {
+    return query().then(toys => {
         const labelData = {}
         toys.forEach(toy => {
             toy.labels.forEach(label => {
