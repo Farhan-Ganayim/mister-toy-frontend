@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, Link } from 'react-router-dom'
 import { toyService } from '../services/toy.service.js'
 
 export function ToyDetails() {
@@ -25,6 +25,9 @@ export function ToyDetails() {
                 <p>{toy.inStock ? 'Currently in stock' : 'Out of stock'}</p>
                 <p>Labels: {toy.labels.join(', ')}</p>
             </section>
+            <button>
+                <Link to="/toy">Back to toys</Link>
+            </button>
 
         </section>
     )
