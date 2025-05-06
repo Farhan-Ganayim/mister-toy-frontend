@@ -26,7 +26,7 @@ export const toyService = {
 }
 
 function query(filterBy = {}) {
-    return httpService.get(BASE_URL, { filterBy })
+    return httpService.get(BASE_URL, filterBy)
 }
 
 function getById(toyId) {

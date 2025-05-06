@@ -14,7 +14,6 @@ export function ToyIndex() {
 
     useEffect(() => {
         loadToys(filterBy).catch(() => showErrorMsg('Cannot load toys'))
-        
         setToyLabels(toyService.getToyLabels())
 
     }, [filterBy])
@@ -25,7 +24,7 @@ export function ToyIndex() {
 
     const labelsCount = toyService.getToyLabelData()
     console.log("🚀 ~ ToyIndex ~ labelsCount:", labelsCount)
-    
+
 
     function onRemoveToy(toyId) {
         removeToy(toyId)
