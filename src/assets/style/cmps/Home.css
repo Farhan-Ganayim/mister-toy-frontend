@@ -1,17 +1,23 @@
 .home-page {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 15em;
+    position: relative;
+    /* margin-top: 15em; */
 }
 
 .home-page img {
     opacity: 0.2;
+    max-width: 85vw;
+    max-height: 75vh;
+    margin-top: 2em;
 }
 
 .home-page-welcome {
     display: flex;
-    font-size: 2em;
+    font-size: 1.5em;
     align-items: center;
-    gap: 1em;
+    gap: .5em;
+    position: absolute;
 }

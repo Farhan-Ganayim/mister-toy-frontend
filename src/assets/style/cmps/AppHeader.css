@@ -1,7 +1,11 @@
 .app-header {
+    padding: .7em;
     background-color: var(--clr1);
     color: var(--clr2bg-light);
-    
+    h1{
+        font-size: 2em;
+    }
+
 }
 
 .header-container {
