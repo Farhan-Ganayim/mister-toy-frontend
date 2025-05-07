@@ -1,16 +1,12 @@
 import { useEffect, useState } from "react";
 
 
-export function ToySort({ sortBy, onSetFilter }) {
+export function ToySort({sortBy, onSetFilter}) {
 
     const [sortByToEdit, setSortByToEdit] = useState({ ...sortBy })
 
     useEffect(() => {
-        onSetFilter(prevFilter => ({
-            ...prevFilter,
-            sortBy: sortByToEdit.type,
-            sortDir: sortByToEdit.sortDir
-        }))
+        onSetFilter({ sortBy: sortByToEdit })
     }, [sortByToEdit])
 
     function handleChange({ target }) {
