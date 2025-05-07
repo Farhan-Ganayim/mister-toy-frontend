@@ -22,8 +22,8 @@ export function ToyIndex() {
         setFilter(filterBy)
     }
 
-    const labelsCount = toyService.getToyLabelData()
-    console.log("🚀 ~ ToyIndex ~ labelsCount:", labelsCount)
+    // const labelsCount = toyService.getToyLabelData()
+    // console.log("🚀 ~ ToyIndex ~ labelsCount:", labelsCount)
 
 
     function onRemoveToy(toyId) {

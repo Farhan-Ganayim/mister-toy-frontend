@@ -90,5 +90,6 @@ function getDefaultFilter() {
         inStock: undefined,
         labels: [],
         pageIdx: 0,
+		sortBy: { type: '', sortDir: 1 },
     }
 }
