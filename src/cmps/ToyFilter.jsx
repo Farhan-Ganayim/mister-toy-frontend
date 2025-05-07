@@ -26,7 +26,7 @@ export function ToyFilter({ filterBy, onSetFilter, toyLabels }) {
 
     return (
         <section className="toy-filter container">
-            <h3>Toys Filter / Sort</h3>
+            <h3>Toys Filter</h3>
 
             <form className="filter-form flex align-center">
                 <input

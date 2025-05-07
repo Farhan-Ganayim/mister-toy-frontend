@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 
-export function ToySort({sortBy, onSetFilter}) {
+export function ToySort({ sortBy, onSetFilter }) {
 
     const [sortByToEdit, setSortByToEdit] = useState({ ...sortBy })
 
@@ -21,9 +21,9 @@ export function ToySort({sortBy, onSetFilter}) {
 
     return (
         <form className="toy-sort">
-
+            <h3>Sort by:</h3>
             <select name="type" value={sortByToEdit.type} onChange={handleChange}>
-                <option value="">Sort by</option>
+                {/* <option value="">Sort by</option> */}
                 <option value="name">Name</option>
                 <option value="price">Price</option>
             </select>

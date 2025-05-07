@@ -4,11 +4,15 @@
     margin: 1em 0;
 }
 
+/* .filter-form {
+    gap: 1em;
+} */
+
 .toy-filter .filter-form {
     flex-wrap: wrap;
     gap: 0.5em;
-  }
+}
 
-  .toy-sort{
+.toy-sort {
     margin-top: 1em;
-  }
+}
