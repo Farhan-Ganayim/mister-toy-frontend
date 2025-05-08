@@ -6,7 +6,8 @@ export function ToySort({ sortBy, onSetFilter }) {
     const [sortByToEdit, setSortByToEdit] = useState({ ...sortBy })
 
     useEffect(() => {
-        onSetFilter({ sortBy: sortByToEdit })
+        const sortToggle = sortByToEdit.type ? sortByToEdit : null
+        onSetFilter({ sortBy: sortToggle })
     }, [sortByToEdit])
 
     function handleChange({ target }) {
@@ -23,7 +24,7 @@ export function ToySort({ sortBy, onSetFilter }) {
         <form className="toy-sort">
             <h3>Sort by:</h3>
             <select name="type" value={sortByToEdit.type} onChange={handleChange}>
-                {/* <option value="">Sort by</option> */}
+                <option value="">No sort</option>
                 <option value="name">Name</option>
                 <option value="price">Price</option>
             </select>
