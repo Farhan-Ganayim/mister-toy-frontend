@@ -1,6 +1,7 @@
 /* Setup */
 @import "setup/vars.css";
 @import "setup/typography.css";
+@import "setup/mq.css";
 
 /* Base */
 @import "base/base.css";
@@ -17,4 +18,4 @@
 @import "cmps/ToyPreview.css";
 @import "cmps/ToyDetails.css";
 @import "cmps/ToyEdit.css";
-@import "cmps/Dashboard.css"
+@import "cmps/Dashboard.css";

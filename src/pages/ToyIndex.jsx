@@ -13,7 +13,8 @@ export function ToyIndex() {
     const [toyLabels, setToyLabels] = useState()
 
     useEffect(() => {
-        loadToys(filterBy).catch(() => showErrorMsg('Cannot load toys'))
+        loadToys(filterBy)
+        .catch(() => showErrorMsg('Cannot load toys'))
         setToyLabels(toyService.getToyLabels())
 
     }, [filterBy])

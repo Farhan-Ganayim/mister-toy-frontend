@@ -25,7 +25,7 @@ export function ToyFilter({ filterBy, onSetFilter, toyLabels }) {
     const { txt, inStock, labels } = filterByToEdit
 
     return (
-        <section className="toy-filter container">
+        <section className="toy-filter-container">
             <h3>Toys Filter</h3>
 
             <form className="filter-form flex align-center">
