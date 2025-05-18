@@ -1,10 +1,8 @@
-import { Link, NavLink } from "react-router-dom";
-import { UserMsg } from "./UserMsg";
-
+import { Link, NavLink } from "react-router-dom"
+import { UserMsg } from "./UserMsg"
+import { LoginSignup } from "./LoginSignup"
 
 export function AppHeader() {
-
-
 
     return (
         <header className="app-header full main-layout">
@@ -19,6 +17,7 @@ export function AppHeader() {
                 </nav>
             </section>
             <UserMsg />
+            <LoginSignup />
         </header>
     )
 }
