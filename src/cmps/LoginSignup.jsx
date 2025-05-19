@@ -17,8 +17,8 @@ export function LoginSignup() {
         onSubmit(credentials)
     }
 
-    async function onSubmit(credentials) {
-        isSignup ?await onSignup(credentials) : await onLogin(credentials)
+    function onSubmit(credentials) {
+        isSignup ? onSignup(credentials) : onLogin(credentials)
     }
 
     async function onLogin(credentials) {
@@ -31,6 +31,7 @@ export function LoginSignup() {
     }
 
     async function onSignup(credentials) {
+        console.log("🚀 ~ onSignup ~ credentials:", credentials)
         try {
             await signup(credentials)
             showSuccessMsg('Signed in successfully')
