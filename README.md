@@ -1,12 +1,52 @@
-# React + Vite
+# Mister Toy 🧸 – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the **React frontend** for the Mister Toy app – a toy marketplace built as part of my full-stack development course at Coding Academy.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔐 Authentication – Try the App!
 
-## Expanding the ESLint configuration
+To test all features (adding, editing, deleting toys), **log in** with:
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Username:** `admin`  
+- **Password:** `aaa`
+
+You can also sign up with any credentials to create a user with limited access.
+
+---
+
+## 🔗 Live App
+
+👉 [Mister Toy – Online](https://mistertoy-backend-2r38.onrender.com)
+
+---
+
+## ⚙️ Tech Stack
+
+### Frontend:
+- React
+- React Router
+- Axios
+
+### Backend (served separately):
+- Node.js / Express
+- MongoDB (via REST API)
+
+---
+
+## 🚀 Features
+
+- Browse toys with full filtering, sorting, and search
+- Login/signup system with session-based authentication
+- Admin-only routes for adding/editing/deleting toys
+- Chart with toy statistics by label
+- Modular route and service structure
+
+---
+
+## 🛠️ Getting Started
+
+### Install dependencies:
+
+```bash
+npm install
