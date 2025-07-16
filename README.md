@@ -35,6 +35,7 @@ with the same command:
 ```bash
 npm run dev
 
+``` 
 ## 📦 Tech Stack
 
 ### Frontend:
