@@ -61,6 +61,9 @@ npm run prod
 ## ▶️ Run the App Locally
 
 npm install
+
+---
+
 npm run dev
 
 Then open:
