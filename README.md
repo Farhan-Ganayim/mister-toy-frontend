@@ -26,7 +26,14 @@ Or sign up with any username/password to create a user with limited access.
 
 ## ▶️ Run the App 
 
-npm run prod
+npm run dev
+
+Make sure you're also running the Mister Toy backend repo: 
+https://github.com/Farhan-Ganayim/mister--Toy-backend
+
+with the same command: 
+```bash
+npm run dev
 
 ## 📦 Tech Stack
 
